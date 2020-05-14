@@ -21,7 +21,7 @@
  * 
  */
 int main(void) {
-
+// ahre loco el mishi 
     char string[MAX_LETTERS]="anana";
     int cant=5;
     int pal=0;

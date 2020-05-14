@@ -16,7 +16,7 @@
 
 #define OK 0
 #define FAIL 1
-#define MAX_LETTERS
+#define MAX_LETTERS 50
 
 #endif /* CONSTANTES_H */
 

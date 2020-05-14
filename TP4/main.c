@@ -20,7 +20,7 @@
 /*
  * 
  */
-int main(int argc, char** argv) {
+int main(void) {
 
     char string[MAX_LETTERS]="anana";
     int cant=5;

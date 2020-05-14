@@ -22,9 +22,12 @@
  */
 int main(void) {
 // ahre loco el mishi 
-    char string[MAX_LETTERS]="anana";
-    int cant=5;
+    char string[MAX_LETTERS]={0};
+    int cant=0;
     int pal=0;
+    
+    cant= input(string);
+    printf("String= %s\n",string);
     
     pal= palindrome(string,(cant-1));
     if (pal==0)

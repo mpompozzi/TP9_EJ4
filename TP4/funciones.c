@@ -5,15 +5,13 @@
  */
 #include "funciones.h"
 
-char* input (void)
+int input (char str[MAX_LETTERS])
 {
 	int c=0;						//Caracter
-	int sstr=0;						//Comienzo de posicion de puntero en el string
-	static char input_str[MAX_LETTERS]={0};			//String de entrada
-	char *str=0;					//Puntero a primer posicion de string de entrada
+        int conta=0;
+        int espacio=0;
 
-	str=&input_str[0];				//Dispongo el puntero a la primer posicion del arreglo input_str
-
+	
 	while((c=getchar())!='\n')      //Cargo el caracter de entrada a la variable c
         {			
 
@@ -21,17 +19,25 @@ char* input (void)
                 {	
                     if((c>='A')&&(c<='Z'))
                     {
-                        c+=('a'-'A');
+                        c=(c-'A'+'a');
                     }
 																			//		valida MAYUSCULAS, NUMEROS Y MINUSCULAS
-                    str = &input_str[sstr++];           //Dispongo el puntero a la primer posicion del arreglo input_str,esta vez, con posicion pos incrementada
+                    str[conta++] = c;           //Dispongo el puntero a la primer posicion del arreglo input_str,esta vez, con posicion pos incrementada
 							//para que luego guarde la siguiente letra en la proxima posicion del arreglo
-                    *str= c;				//Guardo el valor en la posicion actual
-		}
+                    				//Guardo el valor en la posicion actual
+                    
+                }
 
+                else
+                {
+                    espacio++;
+                }
 	}
-
-	return input_str;
+        printf("Conta= %d\n",conta);
+        printf("Espacio= %d\n",espacio);
+        
+	
+        return (conta);
 
 }
 int palindrome(char string[MAX_LETTERS],int cant)

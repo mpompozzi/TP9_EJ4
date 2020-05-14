@@ -18,7 +18,7 @@
 #include <stdlib.h>
 #include "constantes.h"
 
-char* input (void);
+int input (char str[MAX_LETTERS]);
 int palindrome(char string[MAX_LETTERS],int cant);
 
 #endif /* FUNCIONES_H */

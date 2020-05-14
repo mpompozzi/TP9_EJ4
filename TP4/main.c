@@ -13,12 +13,10 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include "funciones.h"
+#include "constantes.h"
 
-#define OK 0
-#define FAIL 1
-#define MAX_LETTERS
 
-int palindrome(char string[MAX_LETTERS],int cant);
 /*
  * 
  */
@@ -41,37 +39,3 @@ int main(int argc, char** argv) {
     return 0;
 }
 
-int palindrome(char string[MAX_LETTERS],int cant)
-{
-    char *p1=&string[0];
-    char *p2=&string[cant];
-    
-    if (p2<=p1)
-    {
-        if((*p2)==(*p1))
-        {
-            printf("Caso inicial: %c\n",(*p2));
-            return OK;
-        }
-        else
-        {
-            printf("Caso inicial fallo: p2=%c\tp1=%c\n",(*p2), (*p1));
-            return FAIL;
-        }
-    }
-    else
-    {
-        if((*p2)==(*p1))
-        {
-            printf("Caso letra: %c\n",(*p2));
-            printf("Caso cant: %d\n",cant);
-            return OK+palindrome((string+1),(cant-2));
-        }
-        else
-        {
-            printf("Caso letra fallo: p2=%c\tp1=%c\n",(*p2), (*p1));
-            printf("Caso cant: %d\n",cant);
-            return FAIL;
-        }
-    }
-}

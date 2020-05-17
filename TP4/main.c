@@ -21,13 +21,15 @@
  * 
  */
 int main(void) {
-// ahre loco el mishi 
+
     char string[MAX_LETTERS]={0};
     int cant=0;
     int pal=0;
     
     cant= input(string);
+#if DEBUG
     printf("String= %s\n",string);
+#endif    
     
     pal= palindrome(string,(cant-1));
     if (pal==0)
